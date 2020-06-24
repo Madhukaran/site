@@ -14,14 +14,14 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'infoomagazines', 'C:/Users/BEAST/Desktop/DjangoBlog-master/static/blog/sw.js')
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'infoomagazines', 'C:/Users/BEAST/Desktop/DjangoBlog-master/site/static/blog/sw.js')
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'be9(c$x@g@d!x+bjcjtv!+bl7(pfec=)$uzrxbj867dfe4rp#7'
+#SECRET_KEY = 'be9(c$x@g@d!x+bjcjtv!+bl7(pfec=)$uzrxbj867dfe4rp#7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

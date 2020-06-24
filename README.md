@@ -92,8 +92,8 @@ or you can simple run `flake8`
 
 ## Author
 ```
-  Mahmudul alam
-  Email: expelmahmud@gmail.com
+  Madhukaran
+  Email: madhukaran449@gmail.com
 ```
 
 <div align="center">
