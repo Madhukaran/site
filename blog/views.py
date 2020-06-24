@@ -22,6 +22,7 @@ class PostListView(ListView):
             tag = get_object_or_404(Tag, slug=tag_slug)
             queryset = queryset.filter(tags__in=[tag])
         if query:
+            paginate_by = 8
             search = Post.objects.filter(title__contains=query)
             queryset = search
         return queryset
