@@ -1,8 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
-from django.contrib.postgres.search import (
-    SearchVector, SearchQuery, SearchRank
-)
+
 from django.views.generic.edit import FormMixin, FormView
 from django.core.mail import send_mail
 from django.db.models import Count
@@ -24,13 +22,8 @@ class PostListView(ListView):
             tag = get_object_or_404(Tag, slug=tag_slug)
             queryset = queryset.filter(tags__in=[tag])
         if query:
-            search_vector = SearchVector('title', weight='A') +\
-                SearchVector('body', weight='B')
-            search_query = SearchQuery(query)
-
-            queryset = Post.published.annotate(
-                rank=SearchRank(search_vector, search_query)
-            ).filter(rank__gte=0.3).order_by('-rank')
+            search = Post.objects.filter(title__contains=query)
+            queryset = search
         return queryset
 
     def get_context_data(self, **kwargs):
