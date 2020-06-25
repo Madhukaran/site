@@ -3,6 +3,19 @@ Django blog is a beginner friendly blog application. This project illustrate Dja
 model manager, how to use custom template tags, django Forms and model form, how to send mail with django, how to add rss syndication,
 and generate sitemap and unit test for model, view, form and template tags and also how to seed database with Factory Boy, Faker and management commands.
 
+## Functionalities
+* Sitemap
+* Robots.txt
+* gzip compression
+* Blog type with newsfeed 
+* Generic post_view count
+* PWA(progressive web app)
+* Added comments for post
+* Search bar
+* Tagging application like twitter
+* Auto ping Sitemap to google
+* Added Wysiwyg editor(froala)
+
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
