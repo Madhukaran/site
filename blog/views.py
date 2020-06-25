@@ -51,6 +51,12 @@ class PostDetailView(FormMixin, DetailView):
         context = super().get_context_data(**kwargs)
         post = self.get_object()
 
+        session_key = f"viewed_article {self.object.slug}"
+        if not self.request.session.get(session_key, False):
+            self.object.views += 1
+            self.object.save()
+            self.request.session[session_key] = True
+
         post_tags_ids = post.tags.values_list('id', flat=True)
         similar_posts = Post.published.filter(tags__in=post_tags_ids)\
             .exclude(id=post.id)
