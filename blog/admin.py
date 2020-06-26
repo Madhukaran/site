@@ -1,7 +1,14 @@
 from django.contrib import admin
 
-from .models import Post, Comment
+from .models import Post, Comment, Profile
 from froala_editor.fields import FroalaField
+
+
+@admin.register(Profile)
+class ProfileAdmin(admin.ModelAdmin):
+    list_filter = ('user',)
+    search_fields = ('user',)
+    ordering = ['user', ]
 
 
 @admin.register(Post)

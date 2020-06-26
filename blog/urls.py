@@ -6,7 +6,7 @@ from .views import (
     PostShareView
 )
 from .feeds import LatestPostsFeed
-from .views import robots
+from .views import robots, UserLoginView
 
 app_name = 'blog'
 
@@ -18,4 +18,5 @@ urlpatterns = [
     path('robots.txt/', robots, name='robots.txt'),
     path('<int:post_id>/share/', PostShareView.as_view(), name='post_share'),
     path('feed/', LatestPostsFeed(), name='post_feed'),
+    path('login/', UserLoginView.as_view(), name='login'),
 ]

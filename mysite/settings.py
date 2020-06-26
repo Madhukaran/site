@@ -21,7 +21,7 @@ PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'infoomagazines', 'C:/Users/BEA
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'be9(c$x@g@d!x+bjcjtv!+bl7(pfec=)$uzrxbj867dfe4rp#7'
+SECRET_KEY = 'be9(c$x@g@d!x+bjcjtv!+bl7(pfec=)$uzrxbj867dfe4rp#7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
